@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* 
+html {
+  height: 100vh;
+  width: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: sans-serif;
+  background-color: #f5f5f5;
+}
+#root {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+} */
+div.app__channels {
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: start;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  background-color: aquamarine;
+}
+div.app__messages {
+  flex: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+div.app__login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+.message-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 600px;
+  overflow-y: scroll;
+}
+.message-content {
+  z-index: 1;
+}
+.time-div-front{
+  display: flex;
+  flex-direction: row;
+
+}
+.chat_list{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 10px;
+  margin: 0;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 5rem;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+  .app {
+    flex-wrap: wrap;
+  }
+  div.app__channels {
+    flex: 1;
+  }
+  div.app__messages {
+    flex: 3;
+  }
+  div.addMessage {
+    position: 'relative';
+  }
+}
+
+/* Media query for even smaller screens */
+@media only screen and (max-width: 576px) {
+  .app {
+    flex-direction: column;
+  }
+  .app > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
